@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeria de Imagens</title>
+<style>
+    .gallery {
+        position: relative; /* Adiciona posição relativa para que as imagens posicionadas absolutamente se baseiem nisso */
+      --s: 250px; /* control the size */
+      
+      
+
+}
+
+   .gallery > img {
+        position: absolute; /* Define posição absoluta para cada imagem */
+        top: 100;
+        left: 100;
+        width: var(--s);
+        aspect-ratio: 0.866;
+        object-fit: cover;
+        clip-path: polygon(0% 25%,0% 75%,50% 100%,100% 75%,100% 25%,50% 0);
+        transform: rotate(var(--r, 0deg)); 
+        cursor: pointer;
+        transition: .2s linear;
+    }
+   
+    img:hover {
+        filter: grayscale(0);
+        z-index: 1; /* Aumenta o z-index na sobreposição do hover */
+        --_t: 1.2;
+    }
+    .gallery > img:nth-child(1) {--r: 45deg;} /* Ajusta a rotação */
+    .gallery > img:nth-child(2) { --r: 65deg;} /* Ajusta a rotação */
+    .gallery > div:nth-child(3) { --r: 90deg;} /* Ajusta a rotação */
+    .gallery > div:nth-child(4) { --r: 150deg;} /* Ajusta a rotação */
+    .gallery > div:nth-child(5) { --r: 225deg;} /* Ajusta a rotação */
+    .gallery > div:nth-child(6) { --r: 200deg;} /* Ajusta a rotação */
+    .gallery > div:nth-child(7) { --r: 332deg;} /* Ajusta a rotação */
+
+    body {
+        margin: 0;
+        height: 100vh;
+        display: grid;
+      
+      
+    }
+</style>
+</head>
+<body>
+<div class="gallery">
+    <img src="./Layer 1.png" alt="a house on a mountain"class="link">
+    <img src="./Polygon 5.png" alt="a house on a mountain">
+    <img src="./Polygon 5.png" alt="a house on a mountain">
+    <img src="./Polygon 7.png" alt="a house on a mountain">
+    <img src="./Polygon 5.png" alt="a house on a mountain">
+    <img src="./Polygon 5.png" alt="a house on a mountain">
+    <img src="./Polygon 7.png" alt="a house on a mountain">
+
+  
+</div>
+</body>
+</html>
